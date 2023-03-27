@@ -1,10 +1,10 @@
 nav {
     background-color: rgb(218, 221, 224);
 }
-nav ul {
+nav div {
     list-style: none;
 }
-nav ul li a {
+nav a {
     color: black;
     text-decoration: none;
 }
@@ -31,4 +31,7 @@ p {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.card-body p {
+    color: black;
 }
