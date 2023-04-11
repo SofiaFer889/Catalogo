@@ -1,7 +1,14 @@
+estilos-h2, .cuadro h2, .mapa h2, h2 {
+  color: rgb(34, 5, 115);
+  text-decoration: underline;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 20px;
+}
+
 /*body*/
 .fondo {
   background-color: black;
-  color: rgb(28, 3, 98);
+  color: rgb(114, 7, 186);
 }
 
 /*header*/
@@ -60,6 +67,7 @@ nav a:hover {
 /*main*/
 main {
   margin-bottom: 100px;
+  margin-top: 20px;
 }
 
 .container {
@@ -70,10 +78,6 @@ main {
   box-shadow: 0px 0px 10px rgba(10, 217, 253, 0.807);
   border: 2px solid rgb(255, 255, 255);
   padding: 10px;
-}
-
-h2 {
-  color: rgb(34, 5, 115);
 }
 
 p {
@@ -141,6 +145,168 @@ p {
 .rectangulo img {
   max-width: 100%;
   height: auto;
+}
+
+.carrusel-lateral {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: ". carrusel .";
+  justify-items: center;
+  margin-top: 50px;
+}
+.carrusel-lateral .carousel {
+  grid-area: carrusel;
+  max-width: 900px;
+  width: 100%;
+  margin: 0;
+}
+.carrusel-lateral .carousel-inner {
+  max-height: 400px;
+  width: 100%;
+  overflow: hidden;
+}
+.carrusel-lateral .carousel-inner .carousel-item {
+  height: 400px;
+}
+.carrusel-lateral .carousel-inner .carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+.carrusel-lateral .carousel-control-prev, .carrusel-lateral .carousel-control-next {
+  width: 5%;
+}
+.carrusel-lateral .carousel-control-prev-icon, .carrusel-lateral .carousel-control-next-icon {
+  height: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  position: absolute;
+  z-index: 5;
+}
+.carrusel-lateral .carousel-control-prev-icon-prev, .carrusel-lateral .carousel-control-next-icon-prev {
+  left: 0;
+}
+.carrusel-lateral .carousel-control-prev-icon-next, .carrusel-lateral .carousel-control-next-icon-next {
+  right: 0;
+}
+
+.imag {
+  width: 200px;
+  height: 200px;
+}
+
+.image-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.card-text2 {
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+.button {
+  font-size: 18px;
+  background-color: rgba(185, 0, 0, 0.9098039216);
+  color: #090101;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.li-imagen {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+.li-imagen li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0;
+  padding: 1rem;
+}
+.li-imagen li .imags {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+  margin-bottom: 1rem;
+}
+.li-imagen li .imags:hover {
+  transform: rotate(360deg);
+}
+.li-imagen li p {
+  margin: 0.5rem 0 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+@media screen and (min-width: 991px) {
+  .li-imagen li {
+    width: 20%;
+    padding: 0;
+  }
+}
+
+.mapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mapa h2 {
+  margin-top: 50px;
+}
+
+.cuadro {
+  border-width: 2px;
+  border-color: rgb(0, 0, 0);
+  padding: 20px;
+  width: 100%;
+  background-color: #050c3d;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.cuadro h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.cuadro a {
+  font-family: "Oswald", sans-serif;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border-bottom: 1px solid #076ea1;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 40px;
+}
+.cuadro a:hover {
+  color: rgb(0, 179, 255);
+}
+.cuadro a .icono {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+.cuadro a .icono i {
+  font-size: 20px;
 }
 
 /*fin main*/

@@ -5,7 +5,7 @@
 /*body*/
 .fondo {
     background-color: black;
-    color: rgb(28, 3, 98);
+    color: rgb(114, 7, 186);
 }
 
 /*header*/
@@ -69,6 +69,7 @@ nav {
 
 main {
     margin-bottom: 100px;
+    margin-top: 20px;
 }  
 
 .container {
@@ -82,7 +83,7 @@ main {
 } 
 
 h2 {
-    color: rgb(34, 5, 115);
+    @extend estilos-h2;
 
 }
 p {
@@ -155,6 +156,186 @@ p {
         height: auto;
     }
 } 
+
+.carrusel-lateral {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: ". carrusel .";
+    justify-items: center;
+    margin-top: 50px;
+
+    .carousel {
+        grid-area: carrusel;
+        max-width: 900px;
+        width: 100%;
+        margin: 0;
+
+        &-inner {
+            max-height: 400px;
+            width: 100%;
+            overflow: hidden;
+
+            .carousel-item {
+                height: 400px;
+
+                img {
+                    height: 400px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &-control-prev,
+        &-control-next {
+            width: 5%;
+
+            &-icon {
+                height: 100%;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                position: absolute;
+                z-index: 5;
+
+                &-prev {
+                    left: 0;
+                }
+
+                &-next {
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+.imag {
+    width: 200px;
+    height: 200px;
+}
+
+.image-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.card-text2 {
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+  
+.button {
+    @include boton;
+    margin-top: 10px;
+}
+
+.li-imagen {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  
+    li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin: 0;
+      padding: 1rem;
+  
+      .imags {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        transition: transform 0.5s ease-in-out;
+        margin-bottom: 1rem;
+  
+        &:hover {
+          transform: rotate(360deg);
+        }
+      }
+  
+      p {
+        margin: 0.5rem 0 0;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+    }
+  
+    @media screen and (min-width: 991px) {
+      li {
+        width: 20%;
+        padding: 0;
+      }
+    }
+}
+
+.mapa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        @extend estilos-h2;
+        margin-top: 50px;
+    }
+}  
+
+.cuadro {
+    border-width: 2px;
+    border-color: rgb(0, 0, 0);
+    padding: 20px;
+    width: 100%;
+    background-color: #050c3d;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  
+    h2 {
+      @extend estilos-h2;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  
+    a {
+      font-family: 'Oswald', sans-serif;
+      display: inline-block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      border-bottom: 1px solid #076ea1;
+      position: relative;
+      padding-left: 30px;
+      padding-right: 30px;
+      line-height: 40px;
+  
+      &:hover {
+        color: rgb(0, 179, 255);
+      }
+  
+      .icono {
+        position: absolute;
+        left: 10px;
+        top: 5px;
+  
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+}
+  
+  
 
 /*fin main*/
 
