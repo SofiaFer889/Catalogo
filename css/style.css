@@ -8,7 +8,7 @@ estilos-h2, .cuadro h2, .mapa h2, h2 {
 /*body*/
 .fondo {
   background-color: black;
-  color: rgb(114, 7, 186);
+  color: rgb(43, 7, 186);
 }
 
 /*header*/
@@ -19,6 +19,7 @@ nav div {
   list-style: none;
 }
 nav a {
+  cursor: pointer;
   color: black;
   width: 70;
   text-decoration: none;
@@ -29,6 +30,14 @@ nav a:hover {
   font-weight: 600;
 }
 
+@media (max-width: 991px) {
+  nav a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  nav a:hover {
+    background: rgba(65, 65, 65, 0.3);
+  }
+}
 .imagen {
   background-image: url(../media/img/avegers.jpg);
   height: 400px;
@@ -40,13 +49,14 @@ nav a:hover {
 }
 
 .titulo {
+  font-size: 80px;
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Oswald", sans-serif;
-  text-shadow: 1px 2px 2px #fff;
+  text-shadow: 3px 4px 4px #000000;
 }
 
 @media (max-width: 991px) {
@@ -309,26 +319,50 @@ p {
   font-size: 20px;
 }
 
+.gemas {
+  margin: 50px;
+  font-family: "Oswald", sans-serif;
+  background: #22212d;
+  color: #4a4a4a;
+  text-align: center;
+  padding: 20px;
+  text-decoration: underline;
+}
+.gemas .contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gemas .info-gemas {
+  margin: 20px;
+  font-family: "Oswald", sans-serif;
+}
+.gemas .info-gemas img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 7px solid #6b2e3e;
+}
+
 /*fin main*/
 /*fin body*/
 /*footer*/
-.redes {
+footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+footer .redes {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(34, 5, 115);
   padding: 10px;
 }
-.redes img {
+footer .redes img {
   height: 30px;
   margin-right: 10px;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }
 
 /*fin footer*/
