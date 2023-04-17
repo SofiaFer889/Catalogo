@@ -1,9 +1,18 @@
-@mixin boton {
-    font-size: 18px;
-    background-color: #b90000e8;
-    color: #090101;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-family: 'Oswald', sans-serif;
-    cursor: pointer;
+@import 'variables';
+
+@mixin boton() {
+  font-size: 18px;
+  background-color: $bgc;
+  color: $color;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: 'Oswald', sans-serif;;
+  cursor: pointer;
 }
+
+@mixin estilos-h2() {
+    color: $color2;
+    text-decoration: underline;
+    font-family: $letra;
+    margin-bottom: 20px;
+};

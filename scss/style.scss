@@ -20,7 +20,7 @@ nav {
         color: black;
         width: 70;
         text-decoration: none;
-        font-family: 'Oswald', sans-serif;
+        font-family: $letra;
         transition: 0.3s;
         &:hover{
             font-weight: 600;
@@ -54,7 +54,7 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Oswald', sans-serif;
+    font-family: $letra;
     text-shadow: 3px 4px 4px #000000;
 }
 
@@ -69,7 +69,7 @@ nav {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-family: 'Oswald', sans-serif;
+        font-family:$letra;
         text-shadow: 1px 2px 2px #fff;
     }
 }
@@ -94,7 +94,7 @@ main {
 } 
 
 h2 {
-    @extend estilos-h2;
+    @include estilos-h2;
 
 }
 p {
@@ -114,9 +114,9 @@ p {
 .card-title {
     font-size: 1.2rem;
     font-weight: bold;
-    color: rgb(34, 5, 115);
+    color: $color2;
     margin-bottom: 0.5rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: $color2;
 }
   
 .card-text {
@@ -180,11 +180,11 @@ p {
     overflow: hidden;
 
     h2 {
-      @extend estilos-h2;
+      @include estilos-h2;
       color: #fff;
 
       a {
-        font-family: 'Oswald', sans-serif;
+        font-family: $letra;
         color: rgba(255, 255, 255, 0.8);
         margin: 10px 0;
       }
@@ -216,7 +216,7 @@ p {
         color: white;
         font-size: 2rem;
         margin-bottom: 20px;
-        font-family: 'Oswald', sans-serif;
+        font-family: $letra;
     }
 
     p {
@@ -367,7 +367,7 @@ p {
     padding: 20px;
   
     h2 {
-      @extend estilos-h2;
+      @include estilos-h2;
       margin-top: 50px;
     }
   
@@ -418,21 +418,21 @@ p {
     border-color: rgb(0, 0, 0);
     padding: 20px;
     width: 100%;
-    background-color: #050c3d;
+    background-color: #4f5ab2;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   
     h2 {
-      @extend estilos-h2;
+      @include estilos-h2;
       font-size: 28px;
       text-transform: uppercase;
       letter-spacing: 2px;
     }
   
     a {
-      font-family: 'Oswald', sans-serif;
+      font-family: $letra;
       display: inline-block;
       margin-bottom: 10px;
       text-decoration: none;
@@ -462,7 +462,7 @@ p {
   
 .gemas{
     margin: 50px;
-    font-family: 'Oswald', sans-serif;
+    font-family: $letra;
     background: #22212d;
     color:  #4a4a4a;
     text-align: center;
@@ -477,7 +477,7 @@ p {
     
     .info-gemas{
         margin: 20px;
-        font-family: 'Oswald', sans-serif;
+        font-family: $letra;
 
         img{
             width: 180px;
@@ -492,12 +492,12 @@ p {
     color: #fff;
   
     h2 {
-      @extend estilos-h2;
+      @include estilos-h2;
       font-size: 50px;
     }
   
     h6 {
-      font-family: 'Oswald', sans-serif;
+      font-family: $letra;
       margin-top: 40px;
     }
   
@@ -562,7 +562,7 @@ p {
   justify-content: center;
   min-height: 100vh;
   background: #757676;
-  font-family: 'Oswald', sans-serif;
+  font-family: $letra;
   padding: 10px 20px;
 
   .contenedor-tarjeta{
@@ -599,7 +599,7 @@ p {
       }
 
       h2{
-        @extend estilos-h2;
+        @include estilos-h2;
       }
 
       h4{
@@ -620,7 +620,7 @@ p {
   }
 }
 
-@media (min-width: 991px){
+@media (min-width: 992px){
   .tarjetas{
     .contenedor-tarjeta{
       flex-direction: row;
@@ -644,6 +644,63 @@ p {
     }
   }
 }
+
+.contenedor2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background: #4a4a4a;
+
+  .tarjeta2{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+
+    .face{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+
+      img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      h3{
+        font-family: $letra;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 45px;
+        color: #fff;
+        background: rgba(0, 0, 0, .4);
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    .contenedor2 {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .tarjeta2 {
+      margin: 10px;
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+}
+
+
 
 
 /*fin main*/
