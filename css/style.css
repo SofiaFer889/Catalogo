@@ -1,4 +1,4 @@
-estilos-h2, .cuadro h2, .mapa h2, h2 {
+estilos-h2, .tarjetas .contenedor-tarjeta .encabezado h2, .registro h2, .cuadro h2, .mapa h2, .estructura .contenido2 h2, h2 {
   color: rgb(34, 5, 115);
   text-decoration: underline;
   font-family: "Oswald", sans-serif;
@@ -132,6 +132,58 @@ p {
     height: 500px;
   }
 }
+.estructura {
+  display: flex;
+  justify-content: center;
+  background: rgba(82, 82, 82, 0.662745098);
+  margin-top: 50px;
+}
+.estructura .card2, .estructura .card3, .estructura .card4 {
+  width: 300px;
+  height: 400px;
+  margin: 30px;
+  background-size: cover;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+}
+.estructura .card2 {
+  background-image: url(../media/img/Jack-Kirby.jpg);
+}
+.estructura .card3 {
+  background-image: url(../media/img/Steve-Ditko.jpeg);
+}
+.estructura .card4 {
+  background-image: url(../media/img/Roy-Thomas.jpg);
+}
+.estructura .contenido2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.estructura .contenido2 h2 {
+  color: #fff;
+}
+.estructura .contenido2 h2 a {
+  font-family: "Oswald", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 10px 0;
+}
+.estructura .contenido2:hover {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  .estructura {
+    flex-wrap: wrap;
+  }
+}
 .rectangulo {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
@@ -234,7 +286,7 @@ p {
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   width: 100%;
   padding: 0;
 }
@@ -244,13 +296,12 @@ p {
   justify-content: center;
   align-items: center;
   width: 80%;
-  margin: 0;
+  margin: 50px;
   padding: 1rem;
 }
 .li-imagen li .imags {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+  width: 200px;
+  height: 200px;
   transition: transform 0.5s ease-in-out;
   margin-bottom: 1rem;
 }
@@ -263,9 +314,19 @@ p {
   text-align: center;
 }
 @media screen and (min-width: 991px) {
+  .li-imagen {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   .li-imagen li {
-    width: 20%;
+    flex: 1 1 auto;
+    width: auto;
+    margin: 0;
     padding: 0;
+  }
+  .li-imagen li:not(:last-child) {
+    margin-right: 50px;
   }
 }
 
@@ -273,11 +334,45 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 .mapa h2 {
   margin-top: 50px;
 }
+.mapa .contenido {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+.mapa .contenido img {
+  width: 450px;
+  height: 450px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+.mapa .contenido iframe {
+  max-width: 100%;
+}
 
+@media only screen and (min-width: 991px) {
+  .mapa .contenido {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .mapa .contenido img {
+    margin-right: 20px;
+    max-width: 50%;
+    margin-bottom: 0;
+  }
+  .mapa .contenido iframe {
+    max-width: 50%;
+  }
+}
 .cuadro {
   border-width: 2px;
   border-color: rgb(0, 0, 0);
@@ -344,6 +439,138 @@ p {
   border: 7px solid #6b2e3e;
 }
 
+.registro {
+  color: #fff;
+}
+.registro h2 {
+  font-size: 50px;
+}
+.registro h6 {
+  font-family: "Oswald", sans-serif;
+  margin-top: 40px;
+}
+.registro .formulario-registro {
+  background: #076ea1;
+  text-align: center;
+  border-radius: 5px;
+  width: 50%;
+  padding: 40px;
+  display: block;
+  margin: 0 auto;
+}
+.registro .formulario-registro .form-sq-wh {
+  padding: 60px;
+}
+.registro .formulario-registro .form-sq-wh label {
+  display: block;
+  margin-bottom: 5px;
+}
+.registro .formulario-registro .form-sq-wh input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #fff;
+  background: #050c3d;
+  color: #fff;
+}
+.registro .formulario-registro .form-sq-wh ::placeholder {
+  color: #fff;
+}
+.registro .formulario-registro button {
+  font-size: 18px;
+  background-color: rgba(185, 0, 0, 0.9098039216);
+  color: #090101;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  background-color: #9d9c9c;
+}
+@media screen and (max-width: 991px) {
+  .registro .formulario-registro {
+    width: 100%;
+    padding: 20px;
+  }
+  .registro .formulario-registro .form-sq-wh {
+    padding: 40px;
+  }
+  .registro .formulario-registro .form-sq-wh input {
+    margin-bottom: 10px;
+  }
+}
+
+.tarjetas {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #757676;
+  font-family: "Oswald", sans-serif;
+  padding: 10px 20px;
+}
+.tarjetas .contenedor-tarjeta {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+}
+.tarjetas .contenedor-tarjeta .encabezado {
+  border-bottom: 1px solid #dddddd;
+  padding: 20px;
+  text-align: center;
+}
+.tarjetas .contenedor-tarjeta .encabezado a {
+  position: relative;
+  display: block;
+}
+.tarjetas .contenedor-tarjeta .encabezado a img {
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(129, 129, 129, 0.06);
+  margin: 20px auto;
+  transition: 0.2s;
+  object-fit: cover;
+}
+.tarjetas .contenedor-tarjeta .encabezado a img:hover {
+  box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.1);
+}
+.tarjetas .contenedor-tarjeta .encabezado h4 {
+  margin-bottom: 20px;
+}
+.tarjetas .contenedor-tarjeta .descripcion {
+  background: #fbfbfb;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+.tarjetas .contenedor-tarjeta .descripcion p {
+  margin-top: 150px;
+  color: #000000;
+}
+
+@media (min-width: 991px) {
+  .tarjetas .contenedor-tarjeta {
+    flex-direction: row;
+  }
+  .tarjetas .contenedor-tarjeta .encabezado {
+    border-right: 1px solid #dddddd;
+    width: 30%;
+  }
+  .tarjetas .contenedor-tarjeta .descripcion {
+    width: 70%;
+  }
+}
+@media (max-width: 991px) {
+  .tarjetas .contenedor-tarjeta {
+    margin: 10px;
+  }
+}
 /*fin main*/
 /*fin body*/
 /*footer*/
