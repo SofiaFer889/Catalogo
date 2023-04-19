@@ -1,18 +1,18 @@
 @import 'variables';
 
-@mixin boton() {
+@mixin boton($bg-color, $text-color) {
   font-size: 18px;
-  background-color: $bgc;
-  color: $color;
+  background-color: $bg-color;
+  color: $text-color;
   border-radius: 5px;
   padding: 10px 20px;
-  font-family: 'Oswald', sans-serif;;
+  font-family: $letra;
   cursor: pointer;
 }
 
-@mixin estilos-h2() {
-    color: $color2;
+@mixin estilos-h2($colores, $font) {
+    color: $colores;
     text-decoration: underline;
-    font-family: $letra;
+    font-family: $font;
     margin-bottom: 20px;
-};
+}

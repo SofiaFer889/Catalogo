@@ -1,7 +1,7 @@
 /*body*/
 .fondo {
   background-color: black;
-  color: rgb(43, 7, 186);
+  color: rgb(254, 5, 5);
 }
 
 /*header*/
@@ -84,13 +84,14 @@ main {
 }
 
 h2 {
-  color: rgb(34, 5, 115);
+  color: #0d0b5b;
   text-decoration: underline;
   font-family: "Oswald", sans-serif;
   margin-bottom: 20px;
 }
 
 p {
+  font-family: "Oswald", sans-serif;
   color: white;
 }
 
@@ -98,6 +99,14 @@ p {
   border: none;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+}
+
+.cards {
+  width: 270px;
+  height: 400px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-body p {
@@ -168,11 +177,10 @@ p {
   overflow: hidden;
 }
 .estructura .contenido2 h2 {
-  color: rgb(34, 5, 115);
+  color: #FFF;
   text-decoration: underline;
   font-family: "Oswald", sans-serif;
   margin-bottom: 20px;
-  color: #fff;
 }
 .estructura .contenido2 h2 a {
   font-family: "Oswald", sans-serif;
@@ -300,7 +308,7 @@ p {
   justify-content: center;
   align-items: center;
   width: 80%;
-  margin: 50px;
+  margin: 0 auto;
   padding: 1rem;
 }
 .li-imagen li .imags {
@@ -338,7 +346,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 10px 0;
 }
 .mapa h2 {
   color: rgb(34, 5, 115);
@@ -357,8 +365,9 @@ p {
   max-width: 600px;
 }
 .mapa .contenido img {
-  width: 450px;
-  height: 450px;
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
   margin-right: 0;
   margin-bottom: 20px;
   position: relative;
@@ -429,8 +438,8 @@ p {
 .gemas {
   margin: 50px;
   font-family: "Oswald", sans-serif;
-  background: #22212d;
-  color: #4a4a4a;
+  background: rgba(121, 73, 73, 0.2588235294);
+  color: #7c0b0b;
   text-align: center;
   padding: 20px;
   text-decoration: underline;
@@ -474,9 +483,6 @@ p {
   display: block;
   margin: 0 auto;
 }
-.registro .formulario-registro .form-sq-wh {
-  padding: 60px;
-}
 .registro .formulario-registro .form-sq-wh label {
   display: block;
   margin-bottom: 5px;
@@ -494,21 +500,17 @@ p {
 }
 .registro .formulario-registro button {
   font-size: 18px;
-  background-color: rgba(185, 0, 0, 0.9098039216);
+  background-color: #9d9c9c;
   color: #090101;
   border-radius: 5px;
   padding: 10px 20px;
   font-family: "Oswald", sans-serif;
   cursor: pointer;
-  background-color: #9d9c9c;
 }
 @media screen and (max-width: 991px) {
   .registro .formulario-registro {
     width: 100%;
     padding: 20px;
-  }
-  .registro .formulario-registro .form-sq-wh {
-    padding: 40px;
   }
   .registro .formulario-registro .form-sq-wh input {
     margin-bottom: 10px;
@@ -547,14 +549,15 @@ p {
   display: block;
 }
 .tarjetas .contenedor-tarjeta .encabezado a img {
+  max-width: 100%;
   border-radius: 50%;
-  box-shadow: 0 0 0 8px rgba(129, 129, 129, 0.06);
+  box-shadow: 0 0 0 8px rgba(238, 73, 73, 0.201);
   margin: 20px auto;
   transition: 0.2s;
   object-fit: cover;
 }
 .tarjetas .contenedor-tarjeta .encabezado a img:hover {
-  box-shadow: 0 0 0 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 12px rgba(255, 0, 0, 0.304);
 }
 .tarjetas .contenedor-tarjeta .encabezado h2 {
   color: rgb(34, 5, 115);
@@ -572,7 +575,7 @@ p {
   position: relative;
 }
 .tarjetas .contenedor-tarjeta .descripcion p {
-  margin-top: 150px;
+  margin-top: 10%;
   color: #000000;
 }
 
@@ -631,7 +634,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: 2s;
+  transition: 1s;
 }
 .contenedor2 .tarjeta2 .cardb .titulo2 {
   text-transform: uppercase;
@@ -648,7 +651,7 @@ p {
   right: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .contenedor2 {
     flex-direction: column;
     height: auto;
@@ -659,6 +662,54 @@ p {
     margin: 20px 0;
   }
 }
+.estrenos {
+  padding: 20px 0;
+}
+.estrenos h2 {
+  color: rgb(34, 5, 115);
+  text-decoration: underline;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.estrenos .caja-estrenos {
+  display: flex;
+  justify-content: center;
+}
+.estrenos .caja-estrenos .ecaja {
+  position: relative;
+  margin: 30px;
+  width: 200px;
+  border: 1px solid red;
+  border-radius: 10px;
+  text-align: center;
+  padding: 50px 20px;
+}
+.estrenos .caja-estrenos .ecaja .button {
+  font-size: 18px;
+  background-color: rgba(185, 0, 0, 0.9098039216);
+  color: #090101;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  padding: 2px 4px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 991px) {
+  .estrenos .caja-estrenos {
+    flex-wrap: wrap;
+  }
+  .estrenos .caja-estrenos .ecaja {
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+  }
+}
+
 /*fin main*/
 /*fin body*/
 /*footer*/
